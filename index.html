@@ -13,10 +13,12 @@
     <div class="sequencer">
         <div class="kick-track">
             <div class="controls">
-                <h1>Kick</h1>
-                <button data-track="0" class="mute kick-volume">
-                    <i class="fas fa-volume-mute"></i>
-                </button>
+                <div class="type-and-mute">
+                    <h1>Kick</h1>
+                    <button data-track="0" class="mute kick-volume">
+                        <i class="fas fa-volume-mute"></i>
+                    </button>
+                </div>
                 <select name="kick-select" id="kick-select">
                     <option value="./sounds/kick-classic.wav">Classic Kick</option>
                     <option value="./sounds/kick-808.wav">808 Kick</option>
@@ -36,10 +38,12 @@
         </div>
         <div class="snare-track">
             <div class="controls">
-                <h1>Snare</h1>
-                <button data-track="1" class="mute snare-volume">
-                    <i class="fas fa-volume-mute"></i>
-                </button>
+                <div class="type-and-mute">
+                    <h1>Snare</h1>
+                    <button data-track="1" class="mute snare-volume">
+                        <i class="fas fa-volume-mute"></i>
+                    </button>
+                </div>
                 <select name="snare-select" id="snare-select">
                     <option value="./sounds/snare-acoustic01.wav">Classic Snare</option>
                     <option value="./sounds/snare-808.wav">808 Snare</option>
@@ -60,10 +64,12 @@
         </div>
         <div class="hihat-track">
             <div class="controls">
-                <h1>Hihat</h1>
-                <button data-track="2" class="mute hihat-volume">
-                    <i class="fas fa-volume-mute"></i>
-                </button>
+                <div class="type-and-mute">
+                    <h1>Hihat</h1>
+                    <button data-track="2" class="mute hihat-volume">
+                        <i class="fas fa-volume-mute"></i>
+                    </button>
+                </div>
                 <select name="hihat-select" id="hihat-select">
                     <option value="./sounds/hihat-acoustic01.wav">Hihat Acoustic</option>
                     <option value="./sounds/hihat-808.wav">808 Hihat</option>
@@ -81,7 +87,7 @@
                 <div class="pad hihat-pad b7"></div>
             </div>
         </div>
-        <button class="play">Play</button>
+        <button class="play">PLAY</button>
         <div class="tempo">
             <input type="range" class="tempo-slider" min="20" max="300" value="150">
             <p>Tempo: <span class="tempo-nr">150</span></p>

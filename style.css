@@ -17,6 +17,7 @@ i, svg{
     height: 5rem;
     margin: 1rem .5rem;
     cursor: pointer;
+    border-radius: 3px;
 }
 
 .kick-pad{
@@ -61,6 +62,7 @@ i, svg{
 
 .kick, .hihat, .snare{
     display: flex;
+    flex: 2;
 }
 
 .controls{
@@ -69,6 +71,13 @@ i, svg{
     align-items: center;
     flex: 1;
     margin: 0;
+    margin-right: 2rem;
+}
+
+.type-and-mute{
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
 }
 
 .controls button{
@@ -79,6 +88,8 @@ i, svg{
     font-size: 1rem;
     cursor: pointer;
     transition: all .5s ease;
+    margin-right: 2rem;
+    outline: none;
 }
 
 .pad{
@@ -88,11 +99,13 @@ i, svg{
 .play{
     padding: 1rem 2rem;
     font-size: 1.5rem;
-    background: rgb(100, 97, 97);
-    color: white;
-    border: none;
+    background: transparent;
+    color: #242424;
+    border: 2px solid #242424;
     cursor: pointer;
     margin-top: 3rem;
+    outline: none;
+    border-radius: 3px;
 }
 
 select{
@@ -125,9 +138,11 @@ select{
     margin : 1rem 0;
     width: 100%;
     position: relative;
-    background: rgb(100, 97, 97);
+    background:transparent;
     cursor: pointer;
-    border-radius: .5rem;
+    border-radius: 50px;
+    border: 2px solid #242424;
+    outline: none;
 }
 
 @keyframes playTrack{
@@ -137,4 +152,47 @@ select{
     to{
         transform: scale(1.2);
     }
+}
+
+@media screen and (max-width: 1695px){
+    .hihat-track, .kick-track, .snare-track{
+        width: 95%
+    }    
+}
+
+@media screen and (max-width: 1695px){
+    .controls{
+        flex-direction: column;
+        align-items: flex-start;
+    }   
+    .controls button{
+        padding: .5rem;
+    } 
+    select{
+        padding: .5rem;
+    }
+    .type-and-mute{
+        margin-bottom: .2rem;
+    }
+    .type-and-mute h1{
+        font-size: 1.5rem;
+    }
+}
+
+@media screen and (max-width: 995px){
+    .pad{
+        width: 2.5rem;
+    }    
+}
+
+@media screen and (max-width: 750px){
+    .hihat-track, .kick-track, .snare-track{
+        flex-direction: column;
+    }   
+}
+
+@media screen and (max-width: 450px){
+    .pad{
+        width: 2rem;
+    }     
 }
